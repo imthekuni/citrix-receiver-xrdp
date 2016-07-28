@@ -27,7 +27,6 @@ apt-get update && \
 apt-get install -y --force-yes --no-install-recommends wget openjdk-7-jre supervisor sudo nano net-tools lxde x11vnc xvfb gtk2-engines-murrine ttf-ubuntu-font-family firefox lxterminal && \
 apt-get install -y xrdp libreoffice && \
 
-
 # create ubuntu user
 useradd --create-home --shell /bin/bash --user-group --groups adm,sudo ubuntu && \
 echo "ubuntu:PASSWD" | chpasswd && \
