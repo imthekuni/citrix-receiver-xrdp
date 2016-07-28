@@ -42,24 +42,24 @@ mv /root/xrdp.ini /etc/xrdp/xrdp.ini && \
 chown root:root /etc/xrdp/xrdp.ini && \
 
 # Install via mark911 instructions
-dpkg --add-architecture i386
-apt-get update
+dpkg --add-architecture i386 && \
+apt-get update && \
 
-apt-get install -f -y firefox
-apt-get install -f -y xdg-utils
+apt-get install -f -y firefox && \
+apt-get install -f -y xdg-utils && \
 
-dpkg -i /tmp/icaclient_*.deb
-apt-get -f install
+dpkg -i /tmp/icaclient_*.deb && \
+apt-get -f install && \
 
-ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/
-c_rehash /opt/Citrix/ICAClient/keystore/cacerts/
+ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/ && \
+c_rehash /opt/Citrix/ICAClient/keystore/cacerts/ && \
 
-rm -f /usr/lib/mozilla/plugins/npwrapper.npica.so /usr/lib/firefox/plugins/npwrapper.npica.so
-rm -f /usr/lib/mozilla/plugins/npica.so
-ln -s /opt/Citrix/ICAClient/npica.so /usr/lib/mozilla/plugins/npica.so
-ln -s /opt/Citrix/ICAClient/npica.so /usr/lib/firefox-addons/plugins/npica.so
+rm -f /usr/lib/mozilla/plugins/npwrapper.npica.so /usr/lib/firefox/plugins/npwrapper.npica.so && \
+rm -f /usr/lib/mozilla/plugins/npica.so && \
+ln -s /opt/Citrix/ICAClient/npica.so /usr/lib/mozilla/plugins/npica.so && \
+ln -s /opt/Citrix/ICAClient/npica.so /usr/lib/firefox-addons/plugins/npica.so && \
 
-xdg-mime default wfica.desktop application/x-ica
+xdg-mime default wfica.desktop application/x-ica && \
 
 # clean up
 apt-get clean && \
