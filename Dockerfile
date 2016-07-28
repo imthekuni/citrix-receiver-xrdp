@@ -46,9 +46,11 @@ dpkg --add-architecture i386 && \
 apt-get update && \
 
 apt-get install -f -y firefox && \
+apt-get install -f -y chromium-browser && \
 apt-get install -f -y xdg-utils && \
 
 dpkg -i /root/icaclient_*.deb && \
+
 apt-get -f install && \
 
 ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts/ && \
