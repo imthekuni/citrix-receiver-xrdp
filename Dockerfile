@@ -49,8 +49,8 @@ apt-get install -f -y firefox && \
 apt-get install -f -y chromium-browser && \
 apt-get install -f -y xdg-utils && \
 
-apt-get install -f -y libwebkit-1.0-2:i386 && \
-apt-get install -f -y libwebkitgtk-1.0-0 && \
+#apt-get install -f -y libwebkit-1.0-2:i386 && \
+#apt-get install -f -y libwebkitgtk-1.0-0 && \
 dpkg -i /root/icaclient_*.deb && \
 apt-get -f install && \
 
